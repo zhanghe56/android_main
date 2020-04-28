@@ -43,6 +43,12 @@ window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
  }
  else
  {
+     if (sessionStorage.vision=="null") {
+     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：25。本页面更新日期：2020.04.28");
+              
+                  }
+     else
+     {
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.28");
 	if (r==true){
     document.getElementById("log_msg").innerHTML=("已经去下载最新版本：25。本页面更新日期：2020.04.28");
@@ -53,3 +59,4 @@ window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
 	}
 	}
 	}
+}
