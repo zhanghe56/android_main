@@ -45,7 +45,7 @@ window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
  {
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.28");
 	if (r==true){
-				 document.getElementById("log_msg").innerHTML=("<a href="https://ww.lanzous.com/ic17mma" target=_blank>点我去下载</a>最新版本：25。本页面更新日期：2020.04.28");
+				 document.getElementById("log_msg").innerHTML=("<a href="ww.lanzous.com/ic17mma" target=_blank>点我去下载</a>最新版本：25。本页面更新日期：2020.04.28");
 	}
 	else{
 	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：25。本页面更新日期：2020.04.28");
