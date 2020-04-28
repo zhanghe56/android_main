@@ -203,7 +203,8 @@ function welcome() {
         } else {
            var username=prompt("欢迎使用撸号大师！我们该怎样称呼你呢？","你大爷的");
         sessionStorage.name = username;
-       sessionStorage.speak=("再次欢迎您，")
+       sessionStorage.speak=("再次欢迎您，");
+       sessionStorage.vision=("24");
         }
        
     } else {
@@ -214,3 +215,23 @@ function welcome() {
 function welcomesuper() {
 sessionStorage.speak=("再次欢迎超级管理员，");
 }
+
+
+function checkvision() {
+window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
+ if (sessionStorage.name=24) {
+ alert("已经是最新版本！本页面更新日期：2020.04.28");
+ document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.vision + "！本页面更新日期：2020.04.28");
+ }
+ else
+ {
+ var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.28");
+	if (r==true){
+				window.open('https://ww.lanzous.com/ic17mma');
+				 document.getElementById("log_msg").innerHTML=("已经去下载最新版本：24。本页面更新日期：2020.04.28");
+	}
+	else{
+	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：24。本页面更新日期：2020.04.28");
+	}
+	}
+	}
