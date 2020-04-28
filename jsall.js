@@ -45,7 +45,7 @@ window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
  {
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.28");
 	if (r==true){
-        window.open('http://www.lanzous.com/ic1ci4h');
+       
     document.getElementById("log_msg").innerHTML=("已经去下载最新版本：25。本页面更新日期：2020.04.28");
 	}
 	else{
