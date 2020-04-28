@@ -37,7 +37,7 @@ function checkvision() {
   var uservision=prompt("请输入当前版本号（两位数字，位于版本号末尾）","");
          sessionStorage.vision=uservision;
 window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
- if (sessionStorage.vision=="24") {
+ if (sessionStorage.vision=="25") {
  alert("已经是最新版本！本页面更新日期：2020.04.28");
  document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.vision + "！本页面更新日期：2020.04.28");
  }
@@ -46,10 +46,10 @@ window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.28");
 	if (r==true){
 				window.open('https://ww.lanzous.com/ic17mma');
-				 document.getElementById("log_msg").innerHTML=("已经去下载最新版本：24。本页面更新日期：2020.04.28");
+				 document.getElementById("log_msg").innerHTML=("已经去下载最新版本：25。本页面更新日期：2020.04.28");
 	}
 	else{
-	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：24。本页面更新日期：2020.04.28");
+	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：25。本页面更新日期：2020.04.28");
 	}
 	}
 	}
