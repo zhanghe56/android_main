@@ -37,25 +37,25 @@ function checkvision() {
   var uservision=prompt("请输入当前版本号（两位数字，位于版本号末尾）","");
          sessionStorage.vision=uservision;
 window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
- if (sessionStorage.vision=="26") {
+ if (sessionStorage.vision=="27") {
  alert("已经是最新版本！本页面更新日期：2020.04.30");
  document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.vision + "！本页面更新日期：2020.04.30");
  }
  else
  {
      if (sessionStorage.vision=="null") {
-     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：26。本页面更新日期：2020.04.30");
+     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：27。本页面更新日期：2020.04.30");
               
                   }
      else
      {
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：2020.04.30");
 	if (r==true){
-    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：26。本页面更新日期：2020.04.30");
+    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：27。本页面更新日期：2020.04.30");
 	document.getElementById('log_msg_button').style.display='block';
     }
 	else{
-	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：26。本页面更新日期：2020.04.30");
+	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：27。本页面更新日期：2020.04.30");
 	}
 	}
 	}
