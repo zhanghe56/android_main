@@ -34,8 +34,8 @@ function getcl(){
  } 
 
 function checkvision() {
-             sessionStorage.newvision=("28");
-         sessionStorage.updateday=("2020.05.01");
+             sessionStorage.newvision=("29");
+         sessionStorage.updateday=("2020.05.02");
   var uservision=prompt("请输入当前版本号（两位数字，位于版本号末尾）","");
          sessionStorage.vision=uservision;
 window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
