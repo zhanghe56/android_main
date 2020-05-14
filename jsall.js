@@ -74,8 +74,11 @@ if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1];
 return "";
 }
 var id=Request("id");
-if(id=="")
-
+if(id==""){
+sessionStorage.visioncode=("0");
+}
 else
+{
 sessionStorage.visioncode=(id);
+}
 }
