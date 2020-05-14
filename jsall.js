@@ -34,18 +34,16 @@ function getcl(){
  } 
 
 function checkvision() {
-             sessionStorage.newvision=("33");
-         sessionStorage.updateday=("2020.05.10");
-  var uservision=prompt("请输入当前版本号（两位数字，位于版本号末尾）","");
-         sessionStorage.vision=uservision;
-window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.vision);
- if (sessionStorage.vision==sessionStorage.newvision) {
+             sessionStorage.newvision=("34");
+         sessionStorage.updateday=("2020.05.14");
+window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.visioncode);
+ if (sessionStorage.visioncode==sessionStorage.newvision) {
  alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
  document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
  }
  else
  {
-     if (sessionStorage.vision=="null") {
+     if (sessionStorage.visioncode=="null") {
      document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
               
                   }
