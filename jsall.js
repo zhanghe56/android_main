@@ -75,7 +75,7 @@ return "";
 }
 var id=Request("id");
 if(id==""){
-sessionStorage.visioncode=("0");
+sessionStorage.visioncode=(id);
 }
 else
 {
