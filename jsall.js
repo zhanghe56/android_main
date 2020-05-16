@@ -34,8 +34,8 @@ function getcl(){
  } 
 
 function checkvision() {
-             sessionStorage.newvision=("35");
-         sessionStorage.updateday=("2020.05.15");
+             sessionStorage.newvision=("36");
+         sessionStorage.updateday=("2020.05.16");
 window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.visioncode);
  if (sessionStorage.visioncode==sessionStorage.newvision) {
  alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
