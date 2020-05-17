@@ -1,3 +1,41 @@
+function checkvision() {
+sessionStorage.newvision=("36");
+sessionStorage.updateday=("2020.05.17");
+sessionStorage.newvisionname=("2.0.0517rev1");
+window.XB.actionFromJsWithParam('设置完成');
+ if (sessionStorage.visioncode==sessionStorage.newvision) {
+     if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
+ alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
+ document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
+    }else{
+alert("有个小更新~可以选择下载~~~本页面更新日期：" + sessionStorage.updateday);
+ document.getElementById("log_msg").innerHTML=("有小更新，主版本已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
+	document.getElementById('log_msg_button').style.display='block';
+    }
+ }
+ else
+ {
+     if (sessionStorage.visioncode=="null") {
+     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+              
+                  }
+     else
+     {
+ var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：" + sessionStorage.updateday);
+	if (r==true){
+    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+	document.getElementById('log_msg_button').style.display='block';
+    }
+	else{
+	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+	}
+	}
+	}
+}
+
+
+
+
 function closeFunction() {
    document.getElementById('actually').style.display='none';
 }
@@ -32,42 +70,6 @@ function getcl(){
  //把上面得到的随机颜色代码赋值给DIV的背景颜色
  
  } 
-
-function checkvision() {
-sessionStorage.newvision=("36");
-sessionStorage.updateday=("2020.05.16");
-sessionStorage.newvisionname=("2.0.0516rev1");
- if (sessionStorage.visioncode==sessionStorage.newvision) {
- 
- 
-     if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
- alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
- document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
-    }else{
-alert("有个小更新~可以选择下载~~~本页面更新日期：" + sessionStorage.updateday);
- document.getElementById("log_msg").innerHTML=("有小更新，主版本已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
-	document.getElementById('log_msg_button').style.display='block';
-    }
- }
- else
- {
-     if (sessionStorage.visioncode=="null") {
-     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
-              
-                  }
-     else
-     {
- var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：" + sessionStorage.updateday);
-	if (r==true){
-    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
-	document.getElementById('log_msg_button').style.display='block';
-    }
-	else{
-	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
-	}
-	}
-	}
-}
 
 function vscodeFunction(){
 function Request(strName){
