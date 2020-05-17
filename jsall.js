@@ -34,12 +34,20 @@ function getcl(){
  } 
 
 function checkvision() {
-             sessionStorage.newvision=("36");
-         sessionStorage.updateday=("2020.05.16");
-window.XB.actionFromJsWithParam("当前版本号：" + sessionStorage.visioncode);
+sessionStorage.newvision=("36");
+sessionStorage.updateday=("2020.05.16");
+sessionStorage.newvisionname=("2.0.0516rev1");
  if (sessionStorage.visioncode==sessionStorage.newvision) {
+ 
+ 
+     if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
  alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
  document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
+    }else{
+alert("有个小更新~可以选择下载~~~本页面更新日期：" + sessionStorage.updateday);
+ document.getElementById("log_msg").innerHTML=("有小更新，主版本已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
+	document.getElementById('log_msg_button').style.display='block';
+    }
  }
  else
  {
@@ -73,12 +81,18 @@ if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1];
 }
 return "";
 }
-var id=Request("id");
-if(id==""){
-sessionStorage.visioncode=(id);
+
+var idvn=Request("idvn");
+
+var idvc=Request("idvc");
+
+
+if(idvc==""){
+sessionStorage.visioncode=("0");
 }
 else
 {
-sessionStorage.visioncode=(id);
+sessionStorage.visioncode=(idvc);
+sessionStorage.visionname=(idvn);
 }
 }
