@@ -2,7 +2,7 @@ function checkvision() {
 sessionStorage.newvision=("36");
 sessionStorage.updateday=("2020.05.17");
 sessionStorage.newvisionname=("2.0.0517rev1");
-window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visioncode + sessionStorage.visionname);
+window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + "." + sessionStorage.visioncode);
  if (sessionStorage.visioncode==sessionStorage.newvision) {
      if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
  alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
