@@ -22,13 +22,19 @@ window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + 
      else
      {
  var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：" + sessionStorage.updateday);
-	if (r==true){
-    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+ 
+ 	  notie.confirm({
+          text: '不是最新版本！点击确定去更新！本页面更新日期：' + sessionStorage.updateday,
+          cancelCallback: function () {
+       				document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+          },
+          submitCallback: function () {
+          	    document.getElementById("log_msg").innerHTML=("已经去下载最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
 	document.getElementById('log_msg_button').style.display='block';
-    }
-	else{
-	document.getElementById("log_msg").innerHTML=("不是最新版本，用户取消了下载动作，最新版本号：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
-	}
+          }
+        })
+ 
+ 
 	}
 	}
 }
