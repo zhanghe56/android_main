@@ -1,14 +1,14 @@
 function checkvision() {
 sessionStorage.newvision=("36");
-sessionStorage.updateday=("2020.05.17");
+sessionStorage.updateday=("2020.05.18");
 sessionStorage.newvisionname=("2.0.0517rev1");
 window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + "." + sessionStorage.visioncode);
  if (sessionStorage.visioncode==sessionStorage.newvision) {
      if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
- alert("已经是最新版本！本页面更新日期：" + sessionStorage.updateday);
+     notie.alert({ type: 1, text: "已经是最新版本！本页面更新日期：" + sessionStorage.updateday, time: 2 })
  document.getElementById("log_msg").innerHTML=("已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
     }else{
-alert("有个小更新~可以选择下载~~~本页面更新日期：" + sessionStorage.updateday);
+    notie.alert({ type: 1, text: "有个小更新~可以选择下载~~~本页面更新日期：" + sessionStorage.updateday, time: 2 })
  document.getElementById("log_msg").innerHTML=("有小更新，主版本已经是最新版本：" + sessionStorage.newvision + "！本页面更新日期：" + sessionStorage.updateday);
 	document.getElementById('log_msg_button').style.display='block';
     }
@@ -16,8 +16,8 @@ alert("有个小更新~可以选择下载~~~本页面更新日期：" + sessionS
  else
  {
      if (sessionStorage.visioncode=="null") {
-     document.getElementById("log_msg").innerHTML=("用户取消输入。最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
-              
+     document.getElementById("log_msg").innerHTML=("出现问题。最新版本：" + sessionStorage.newvision + "。本页面更新日期：" + sessionStorage.updateday);
+     document.getElementById('log_msg_button').style.display='block';      
                   }
      else
      {
