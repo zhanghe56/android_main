@@ -21,8 +21,6 @@ window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + 
                   }
      else
      {
- var r=confirm("不是最新版本！点击确定去更新！本页面更新日期：" + sessionStorage.updateday);
- 
  	  notie.confirm({
           text: '不是最新版本！点击确定去更新！本页面更新日期：' + sessionStorage.updateday,
           cancelCallback: function () {
