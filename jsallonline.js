@@ -71,7 +71,7 @@ function getcl(){
  
  } 
 
-function vscodeFunction(){
+function vscodesFunction(){
 function Request(strName){
 var strHref = location.href;
 var intPos = strHref.indexOf("?");
