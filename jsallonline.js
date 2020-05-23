@@ -1,7 +1,7 @@
 function checkvision() {
-sessionStorage.newvision=("37");
-sessionStorage.updateday=("2020.05.22");
-sessionStorage.newvisionname=("2.0.0522rev1");
+sessionStorage.newvision=("38");
+sessionStorage.updateday=("2020.05.23");
+sessionStorage.newvisionname=("2.0.0523rev1");
 window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + "." + sessionStorage.visioncode);
  if (sessionStorage.visioncode==sessionStorage.newvision) {
      if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
@@ -40,7 +40,7 @@ window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + 
 }
 
 function checkonlineres() {
-document.body.style.background = "#D52729";
+document.body.style.background = #D52729;
 }
 
 
