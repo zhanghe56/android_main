@@ -40,7 +40,7 @@ window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + 
 }
 
 function checkonlineres() {
-document.body.style.background = #D52729;
+
 }
 
 
