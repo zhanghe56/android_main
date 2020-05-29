@@ -98,6 +98,7 @@ var idvn=Request("idvn");
 
 var idvc=Request("idvc");
 
+var nightc=Request("nightc");
 
 if(idvc==""){
 sessionStorage.visioncode=("0");
@@ -106,5 +107,6 @@ else
 {
 sessionStorage.visioncode=(idvc);
 sessionStorage.visionname=(idvn);
+localStorage.nightlyIsDark=(nightc);
 }
 }
