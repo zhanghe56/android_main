@@ -27,6 +27,26 @@ ZH's team
 <div id="results"></div><p>
 <script src="jsallonline.js"></script>
 <script src="notie.js"></script>
-</script>
+    <script src="nightly.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var Nightly = new Nightly(
+        {
+          classes: [
+            {
+              apply: 'redify',
+              to: '.upper',
+            },
+            {
+              apply: 'greenfy',
+              to: '.lower',
+            },
+          ],
+        },
+        true
+      );
+      document.getElementById('btn').addEventListener('click', function () {
+        Nightly.toggle();
+      });
+    </script>
 </body>
 </html>
