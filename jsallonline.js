@@ -1,7 +1,7 @@
 function checkvision() {
 sessionStorage.newvision=("42");
 sessionStorage.updateday=("2020.05.31");
-sessionStorage.newvisionname=("2.0.0531rev1");
+sessionStorage.newvisionname=("2.0.0531rev2");
 window.XB.actionFromJsWithParam('当前版本号' + sessionStorage.visionname + "." + sessionStorage.visioncode);
  if (sessionStorage.visioncode==sessionStorage.newvision) {
      if(sessionStorage.visionname.indexOf(sessionStorage.newvisionname) !=-1){
