@@ -102,6 +102,7 @@ var nightc=Request("nightc");
 
 if(idvc==""){
 sessionStorage.visioncode=("0");
+localStorage.nightlyIsDark=(nightc);
 }
 else
 {
