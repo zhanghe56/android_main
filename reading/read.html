@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
-<title>XB小报 - 阅读</title>
+<title>XB小报 - 阅读-书架</title>
         <link rel="stylesheet" type="text/css" href="../notie.css">
         <link rel="stylesheet" type="text/css" href="readstyle.css">
     <style type="text/css">
@@ -16,22 +16,17 @@
             width: 100%;
             overflow: hidden;
             background: #f7eee5;
-        }</style>
+        }
+        a:link {color: #FFFFFF}
+        a:visited {color: #FFFFFF}
+        a{text-decoration: none;}</style>
 </head>
 <body>
-<div id='marguee' style='text-align:center;font-size:60px;font-weight:900'>阅读</div>
+<div id='marguee' style='text-align:center;font-size:60px;font-weight:900'>书架</div>
 <hr/>
-<div id="zhangjie">当前章节：</div><input type="button" value="下一章" onclick="nextpage()" class="button7"/><input type="button" value="上一章" onclick="uppage()" class="button7"/>
+  <div class="a2"><a href="books/world/world.html">天下</a></div>  <div class="a1">暂无内容...</div><br><br><br><br><br><br>
 <hr/>
-<iframe type="iframe" id="main" src="1.html" width="350" height="600" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
-<hr/>
-<input type="button" value="下一章" onclick="nextpage()" class="button7"/><input type="button" value="上一章" onclick="uppage()" class="button7"/><a href="javascript:scroll(0,0)"><button class="button7">返回顶部</button></a>
-<script src="../notie.js"></script>
-<script src="jsread.js"></script>
-<script src="../jsallonline.js"></script>
- <hr />
        <div style="text-align:center;font-size:18px;font-weight:1">
-<a href="http://zhanghe56.m.icoc.me" target=_blank>XB小报官方网站</a><p>
 based on html<img width="25" height="25" src="../github.jpg" style="vertical-align:middle"/><p>
 powered by<button type="button" onclick="realFunction()"class="button7">
 ZH's team
@@ -39,7 +34,9 @@ ZH's team
 <p id="actually" style="display:none">(其实只有ZH一个人)<button type="button" onclick="closeFunction()" >
 收起
 </button></p>
-想挑战阅读极限？来，<button onclick="setColor()"class="button7">给点颜色</button>
 <div id="results"></div><p>
+<script src="../notie.js"></script>
+<script src="jsread.js"></script>
+<script src="../jsallonline.js"></script>
 </body>
 </html>
