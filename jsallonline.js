@@ -111,3 +111,7 @@ sessionStorage.visionname=(idvn);
 localStorage.nightlyIsDark=(nightc);
 }
 }
+
+function closed(){
+	window.location.href="closed.html" ;   
+	}
