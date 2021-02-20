@@ -20,7 +20,7 @@
         a:visited {color: #FFFFFF}
         a{text-decoration: none;}</style>
 </head>
-<body>
+<body onload="client()">
 <div id='marguee' style='text-align:center;font-size:60px;font-weight:900'>书架</div>
 <hr/>
   <div class="a1"><a href="http://zhanghe56.gitee.io/android_main/help/reading/help.html">阅读帮助</a></div>
@@ -31,7 +31,12 @@
   <div class="a1"><a href="http://zhanghe56.gitee.io/android_main/reading/test/test.html">内测页面</a></div><br>
 	
 <br><br><br><br><br><br><br><br><br><br><br>
-<hr/>
+<hr />
+<div style="text-align:center;font-size:12px;font-weight:1">
+<img id="clientlogo" width="25" height="25" src="../github.jpg" style="vertical-align:middle"><text id="clienttext">正在识别您的浏览器...</p>
+<script src="jsclient.js"></script>
+</div>
+<hr />
        <div style="text-align:center;font-size:18px;font-weight:1">
 based on html<img width="25" height="25" src="../github.jpg" style="vertical-align:middle"/><p>
 powered by<button type="button" onclick="realFunction()"class="button7">
